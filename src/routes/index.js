@@ -1,14 +1,11 @@
-const express = require('express')
-const asyncHandler = require('express-async-handler')
-const healthController = require('../controllers/healthController')
-const replaceMeController = require('../controllers/replacemeController')
+// routes/authRoutes.js
+const express = require("express");
+const authController = require("../controllers/authController");
+const authMiddleware = require("../middlewares/authMiddleware");
+const router = express.Router();
 
-let router = express.Router()
-router.route('/health').get(healthController.healthCheck)
+router.post("/signup", authController.signUp);
+router.post("/signin", authController.signIn);
+router.get("/user", authMiddleware.authenticateToken, authController.getUser);
 
-/* FIXME put your real routes here */
-router.route('/replaceme').get(asyncHandler(replaceMeController.getReplaceMes))
-  .put(asyncHandler(replaceMeController.updateReplaceMes))
-  .post(asyncHandler(replaceMeController.addReplaceMes))
-
-module.exports = router
+module.exports = router;

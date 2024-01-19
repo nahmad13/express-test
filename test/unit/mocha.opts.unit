@@ -1,3 +1,0 @@
-test/unit/**/*.spec.js
---timeout 12000
---recursive
