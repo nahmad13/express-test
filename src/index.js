@@ -1,7 +1,7 @@
 const dotenv = require("dotenv");
 dotenv.load({ path: ".env" });
 const app = require("./server.js");
-const databaseConnectionInstance = require("../src/db/index");
+const databaseConnectionInstance = require("./db/db");
 
 const startup = async () => {
   /**
