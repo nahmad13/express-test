@@ -1,6 +1,7 @@
+// server.js
 const express = require("express");
 const bodyParser = require("body-parser");
-const routes = require("./modules/user/user.routes");
+const routes = require("./routes/index"); // Import the index.js file
 const cors = require("cors");
 const app = express();
 
