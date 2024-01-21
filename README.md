@@ -15,6 +15,9 @@ The primary purpose of this repository is to provide a foundation for building w
 - MongoDB integration for data storage.
 - CRUD operations for users and posts.
 - Express.js for building RESTful APIs.
+- utility function for reading file directory
+- utility function for getting response from api call
+- utility function to download content from array of urls & error handling
 - Basic error handling and request validation.
 
 ## Getting Started
@@ -22,5 +25,5 @@ The primary purpose of this repository is to provide a foundation for building w
 1. **Clone the Repository:**
 
    ```bash
-   git clone https://github.com/your-username/express-mongodb-jwt-boilerplate.git
+   git clone https://github.com/nahmad13/express-test.git
    ```

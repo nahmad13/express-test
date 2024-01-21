@@ -1,4 +1,3 @@
-// routes/postRoutes.js
 const express = require("express");
 const postController = require("./post.controller");
 const postValidator = require("./post.validator");

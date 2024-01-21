@@ -31,13 +31,16 @@ class DatabaseConnection {
       useCreateIndex: true,
     };
 
-    // add these in after so we can safely log connect configurations
     connectOptions.user = user;
     connectOptions.pass = pass;
 
     await mongoose.connect(connectUri, connectOptions);
 
-    console.log("info", "Connected to mongo successfully");
+    console.log(
+      "info",
+      "Connected to mongo successfully with options",
+      connectOptions
+    );
 
     mongoose.connection.on("error", (error) => {
       console.log("error", "Mongoose connection error", error);
@@ -48,7 +51,6 @@ class DatabaseConnection {
   }
 }
 
-// Create a single instance of the DatabaseConnection class
 const databaseConnectionInstance = new DatabaseConnection();
 
 module.exports = databaseConnectionInstance;
