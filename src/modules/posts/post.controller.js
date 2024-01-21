@@ -1,10 +1,9 @@
-// controllers/postController.js
 const postService = require("./post.service");
 
 async function createPost(req, res, next) {
   try {
     const { title, content } = req.body;
-    const userId = req.user.id; // Assuming the user is authenticated and user ID is available in req.user
+    const userId = req.user.id;
     const newPost = await postService.createPost(title, content, userId);
     res.status(201).json(newPost);
   } catch (error) {

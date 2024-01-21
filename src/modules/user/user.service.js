@@ -1,4 +1,3 @@
-// services/authService.js
 const User = require("./user.schema");
 const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
